@@ -25,6 +25,9 @@ COPY --from=build /app/build /usr/share/nginx/html
 # Copie o arquivo de configuração personalizado do Nginx para o contêiner
 COPY nginx.conf /etc/nginx/nginx.conf
 
+# Copie o aplicativo construído para o diretório padrão do nginx
+COPY --from=0 /app/build /usr/share/nginx/html
+
 # Exponha a porta 80 para o tráfego da web
 EXPOSE 8000
 
