@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target":  "http://api.rjconsultores.com.br/",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": "api-gateway"
+    }
+  }
+}
