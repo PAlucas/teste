@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t vendas .'
+        sh 'sudo docker build -t vendas .'
       }
     }
   }
